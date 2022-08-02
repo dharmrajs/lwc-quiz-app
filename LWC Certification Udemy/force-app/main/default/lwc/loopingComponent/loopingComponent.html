@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="For Each Loop">
+        <div class="slds-var-m-around_medium">
+            <template for:each={watchList} for:item="watch">
+                <div key={watch}>
+                    {watch}                    
+                </div>
+            </template>    
+        </div>
+    </lightning-card>
+    <lightning-card title="Iterator Loop">
+        <div class="slds-var-m-around_medium">
+            <template iterator:ceo={ceoList}>                
+                <div key={ceo.value.id}>
+                    <ul>
+                        <li>ceo.value.name</li>
+                    </ul>    
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
