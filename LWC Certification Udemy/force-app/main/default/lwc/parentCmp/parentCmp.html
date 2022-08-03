@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Parent Component">        
+        <lightning-button label="I am Parent Component" slot="action"></lightning-button>
+        <div class="slds-p-horizontal_small">
+            <div class="slds-grid">
+                <template iterator:it={childNames}>
+                    <div class="slds-col" key={it.value.id}>
+                        <span>{it.value.label} : {it.value.status}</span>
+                        <c-child-cmp child-name={it.value.childName}
+                                    child-id={it.value.childId}
+                                    child-status={it.value.childStatus}></c-child-cmp>    
+                    </div>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

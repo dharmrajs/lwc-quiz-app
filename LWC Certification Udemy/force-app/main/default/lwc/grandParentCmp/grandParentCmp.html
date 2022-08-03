@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Grand Parent Component">
+        <lightning-button label="I am Grandparent Component" slot="action"></lightning-button>   
+        <div class="slds-p-horizontal_small card-body-container">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <!--Status-->
+                    <span>
+                        {currentlyActiveChild} of {maxChild} selected
+                    </span>
+                </div>
+                <div class="slds-col">
+                    <!--Button-->
+                    <lightning-button label="Reset All" onclick={handleResetBtn}>                        
+                    </lightning-button>
+                </div>
+            </div>
+            <div class="slds-grid">
+                
+            </div>
+        </div>
+        <p slot="footer">LWC Hierarchy Communication</p>
+    </lightning-card>
+</template>
