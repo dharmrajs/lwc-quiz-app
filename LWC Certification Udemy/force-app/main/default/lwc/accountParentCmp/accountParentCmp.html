@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Get your business">
+        <lightning-button label="Get New Bussiness" slot="actions"></lightning-button>
+        <p class="slds-p-horizontal_small">
+            <lightning-combobox
+                                name="accounts"
+                                label="Select Account"
+                                placeholder="Select Accounts"
+                                options={resultAccList}
+                                onchange={handleAccountChange}>                
+            </lightning-combobox>
+            <template if:true={contactList}>
+                <ul class="slds-m-around_medium slds-has-dividers_bottom-space">
+                    <template iterator:it={contactList}>
+                        <li key={it.value.Id} class="slds-item">
+                            <c-show-contact-child-comp con-id={it.value.Id}
+                                                        con-obj={it.value}
+                                                        contactclick={handleContactClick}>                                
+                            </c-show-contact-child-comp>
+                        </li>
+                    </template>    
+                </ul>
+            </template>   
+        </p>
+        <p slot="footer">
+            Your Bussiness List
+        </p>
+    </lightning-card>
+</template>
