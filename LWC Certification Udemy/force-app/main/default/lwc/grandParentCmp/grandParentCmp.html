@@ -1,6 +1,6 @@
 <template>
     <lightning-card title="Grand Parent Component">
-        <lightning-button label="I am Grandparent Component" slot="action"></lightning-button>   
+        <lightning-button label="I am Grandparent Component" slot="actions"></lightning-button>   
         <div class="slds-p-horizontal_small card-body-container">
             <div class="slds-grid slds-gutters">
                 <div class="slds-col">
@@ -16,7 +16,10 @@
                 </div>
             </div>
             <div class="slds-grid">
-                
+                <div class="slds-col">
+                    <c-parent-cmp ondeselectevt={handleDeslectEvt} onselectbtnclick={handleChildSelection}>                        
+                    </c-parent-cmp>
+                </div>
             </div>
         </div>
         <p slot="footer">LWC Hierarchy Communication</p>

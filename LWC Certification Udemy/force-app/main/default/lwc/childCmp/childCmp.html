@@ -1,13 +1,11 @@
 <template>
-    <div class="slds-grid">
-        <div class="slds-col slds-size_1-of-1">
+    <!--<div class="slds-grid">-->
+        <!-- <p>
             {childName}
-        </div>
-        <div class="slds-col slds-size_1-of-1">
-            <lightning-button label="Select" variant="success" title="select"
-                            class="slds-m-left_x-small"
-                            onclick={handleSelectBtn}>
-                        </lightning-button>
-        </div>
-    </div>
+        </p> -->
+        <lightning-button style="display: block;"  label={btnLabel} variant={btnVariant} title="select"
+                        class="slds-m-left_x-small"
+                        onclick={handleSelectBtn}>
+        </lightning-button>
+    <!--</div>-->
 </template>
