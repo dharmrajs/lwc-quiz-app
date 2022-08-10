@@ -1,0 +1,10 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <template iterator:it={todoItemsArr}>
+            <div key={it.value} class="slds-col slds-size_1-of-1">
+                <c-to-do-item to-do-task={it.value}>                    
+                </c-to-do-item>
+            </div>
+        </template>    
+    </div>
+</template>

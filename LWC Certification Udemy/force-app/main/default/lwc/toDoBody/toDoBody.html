@@ -1,0 +1,17 @@
+<template>
+
+    <!--TODO Lists-->
+    <c-to-do-list></c-to-do-list>
+    <!-- Footer Section to Add TODO Item-->
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_8-of-12">
+            <lightning-input type="text" value={toDoTask} onblur={handleTODOItemBlur} placeholder="Enter New task">                
+            </lightning-input>
+        </div>        
+        <div class="slds-col slds-size_4-of-12">
+            <lightning-button variant="success" label="New Task" title="New Task" onclick={handleNewTODO}
+                                class="slds-m-left_x-small">
+            </lightning-button>
+        </div>
+    </div>
+</template>

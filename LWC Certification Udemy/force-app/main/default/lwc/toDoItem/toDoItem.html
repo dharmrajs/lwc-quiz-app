@@ -1,0 +1,17 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_8-of-12">
+            <span>
+                {toDoTask}
+            </span>
+        </div>
+        <div class="slds-col slds-size_4-of-12">
+            <button class="slds-button slds-button_icon slds-button_icon_brand" title="delete">
+                <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href={deleteBtnPath}></use>
+                </svg>
+                <span class="slds-assitive-text">Delete</span>
+            </button>
+        </div>
+    </div>
+</template>
