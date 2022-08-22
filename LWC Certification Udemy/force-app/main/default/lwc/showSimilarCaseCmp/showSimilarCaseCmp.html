@@ -1,0 +1,11 @@
+<template>
+    <template if:true={similarCaseRecs}>        
+        <lightning-datatable key-field="Id"
+                                data={similarCaseRecs}
+                                columns={columns}>
+        </lightning-datatable>
+    </template>
+    <template if:true={errorMsg}>  
+        Sorry no cases fetched with similar issue    
+    </template>
+</template>
