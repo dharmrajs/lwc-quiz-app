@@ -1,0 +1,12 @@
+<template>
+    <div class="container">
+        <p>
+            Question {questionNumber}   -   {question}
+            <lightning-radio-group
+                options={options}
+                type="radio"
+                onchange={handleChange}>                
+            </lightning-radio-group>
+        </p>        
+    </div>
+</template>
