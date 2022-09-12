@@ -2,7 +2,7 @@
     <lightning-card title="Quizzz App In LWC">
         <lightning-button label="Submit New Test" slot="actions"></lightning-button>
         <p class="slds-p-horizontal_small">
-            quizJSONObj => {questionDetails}
+            <!--quizJSONObj => {questionDetails}-->
             <template if:true={quizJSONObj}>
                 <template for:each={quizJSONObj} for:item="question" for:index="quizIdx">
                     <div key={question.qId}>
