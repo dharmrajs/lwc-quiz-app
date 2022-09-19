@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Accessing Element From HTML" >        
+        <div onclick={fetchDetails}>
+            <p>
+                Hello This is 1st P from card->div->p
+            </p>
+        </div>
+        <div class="manualDOMManipulation" lwc:dom="manual">
+        </div>
+    </lightning-card>
+</template>
