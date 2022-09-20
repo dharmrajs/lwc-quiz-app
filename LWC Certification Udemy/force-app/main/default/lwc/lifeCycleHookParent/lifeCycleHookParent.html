@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Parent Card">
+        <div class="parent-div">
+            {trackableProp}
+        </div>
+        <div class="parent-div">
+            {publicProp}
+        </div>
+        <lightning-button label="Remove Child" variant="brand" onclick={handleClick}>            
+        </lightning-button>
+    </lightning-card>
+    <template if:true={renderBtn}>
+        <c-life-cycle-hook-child></c-life-cycle-hook-child>
+    </template>
+</template>
