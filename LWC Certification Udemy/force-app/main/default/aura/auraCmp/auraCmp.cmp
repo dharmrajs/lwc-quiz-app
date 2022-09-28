@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="msgFromAura" type="String"></aura:attribute>
+    <aura:attribute name="auraAttr" type="String" default="FROM AURA"></aura:attribute>
+    <c:lwcCmp auraMsg="{!v.auraAttr}" onmsgtoaura="{!c.handleMsgFromLWC}"></c:lwcCmp>
+    <div>
+        {!v.msgFromAura}
+    </div>
+</aura:component>	
