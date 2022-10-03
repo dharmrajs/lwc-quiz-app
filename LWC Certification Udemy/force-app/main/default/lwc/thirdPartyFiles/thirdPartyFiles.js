@@ -1,6 +1,7 @@
 import { LightningElement } from 'lwc';
 import MOMENTLIB from "@salesforce/resourceUrl/momentZipFolder";
-import {loadScript} from "lightning/platformResourceLoader";
+import ANIMATE_LIB from "@salesforce/resourceUrl/animateZipFolder";
+import {loadScript, loadStyle} from "lightning/platformResourceLoader";
 export default class ThirdPartyFiles extends LightningElement {
 
     currentData;
@@ -8,7 +9,8 @@ export default class ThirdPartyFiles extends LightningElement {
     renderedCallback() {
         if(!this.isLibLoaded) {
             Promise.all([
-                loadScript(this, MOMENTLIB + '/moment/moment.js')
+                loadScript(this, MOMENTLIB + '/moment/moment.js'),
+                loadStyle(this, ANIMATE_LIB + '/animateZipFolder/animate.min.css')
             ]).then(( () => {
                 this.setDateOnScreen();
             }));
