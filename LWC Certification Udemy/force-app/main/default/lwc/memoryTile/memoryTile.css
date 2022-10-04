@@ -1,0 +1,12 @@
+img.image-tile {
+    height: 100px;
+    width: 100px;
+}
+
+img.hide-img-before-click {
+    visibility: hidden;
+}
+
+.show-img-onclick {
+    visibility: visible;
+}

@@ -1,0 +1,18 @@
+<template>
+    Hi There this is game board
+    <div class="slds-grid slds-wrap">
+        <template for:each={memoryTileArray} for:item="memoryTile">
+            <div class="slds-col slds-size_1-of-4 slds-align_absolute-center 
+                        slds-p-around_large tile-parent around-border"
+                        onclick={handleMemoryClick}
+                        data-key={memoryTile.tileNo}
+                        key={memoryTile.tileNo}>
+                        <!--{memoryTile.tileNo}, {memoryTile.imagePath}, {memoryTile.memoryName} -->
+                <c-memory-tile tile-no={memoryTile.tileNo}
+                                image-path={memoryTile.imagePath}
+                                memory-name={memoryTile.memoryName}>                    
+                </c-memory-tile>
+            </div>
+        </template>
+    </div>
+</template>
