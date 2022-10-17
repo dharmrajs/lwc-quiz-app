@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Create Account With LDS">        
+        <lightning-record-form object-api-name={objectName}
+        fields={accObjFieldNames}
+        onsuccess={successHandler}>
+        </lightning-record-form>
+    </lightning-card>
+    <lightning-card title="View Data Account With LDS">
+        <lightning-record-form object-api-name={objectName}
+        fields={accObjFieldNames}
+        record-id="0015i00000R8vB0AAJ">            
+        </lightning-record-form>
+    </lightning-card>
+        <lightning-card title="View Data Account With LDS In Read Only">
+            <lightning-record-form mode="readonly"
+            object-api-name={objectName}
+            fields={accObjFieldNames}
+            record-id="0015i00000R8vB0AAJ" columns="2">
+            </lightning-record-form>
+        </lightning-card>
+</template>

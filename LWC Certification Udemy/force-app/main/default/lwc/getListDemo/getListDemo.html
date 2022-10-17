@@ -1,0 +1,24 @@
+<template>
+    <h1>Using getListUi Demo</h1>
+    <table>
+        <thead>
+            <template if:true={displayColumnNames}>
+                <template for:each={displayColumnNames} for:item="columnName">
+                    <tr key={columnName.fieldApiName}></tr>
+                </template>
+            </template>
+        </thead>
+        <tbody>
+            <template for:each={contacts} for:item="con">
+                <tr key={con}>
+                    <td>{con.fields.Name.value}</td>
+                    <td>{con.fields.Account.value}</td>
+                    <td>{con.fields.Title.value}</td>
+                    <td>{con.fields.Phone.value}</td>
+                    <td>{con.fields.Email.value}</td>
+                    <td>{con.fields.Owner.displayValue}</td>
+                </tr>
+            </template>
+        </tbody>     
+    </table>
+</template>
