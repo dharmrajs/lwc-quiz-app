@@ -1,0 +1,47 @@
+<template>
+    <h2>Filter Section</h2>
+        <lightning-input type="text"
+                         placeholder="Search Key"
+                         onblur={handleSearchOnBlur}>
+        </lightning-input>
+        <lightning-slider label="Price"
+                          step="10000"
+                          value={sliderDefaultValue}
+                          min={MIN_ALLOWED_PRICE}
+                          max={MAX_ALLOWED_PRICE}
+                          onchange={handleSliderChange}>                
+        </lightning-slider>
+        <lightning-accordion>
+            <lightning-accordion-section name="Category" label="Category">
+                <p>                
+                    <template if:true={categories.data}>
+                        <template for:each={categories.data.values} for:item="category">
+                            <lightning-input key={category.value} label={category.label} type="checkbox" data-value={category.value}
+                                checked onchange={handleCategoryChange}>
+                            </lightning-input>
+                        </template>
+                    </template>
+                    <template if:true={categories.error}>
+                        Cannot show categories
+                    </template>
+                </p>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="Make" label="Make">
+                <p>
+                    <template if:true={make.data}>
+                        <h3>Make</h3>
+                        <template for:each={make.data.values} for:item="make">
+                            <lightning-input key={make.value} label={make.label} type="checkbox"
+                                            data-value={make.value} checked
+                                            onchange={handleMakeChange}>
+                            </lightning-input>
+                        </template>
+                    </template>
+                    <template if:true={make.error}>
+                        Cannot show make
+                    </template>
+                </p>                
+            </lightning-accordion-section>
+        </lightning-accordion>
+        
+</template>

@@ -1,0 +1,19 @@
+<template >
+	<template if:true={carRecord}>
+		<div class="car-content" onclick={handleCarOnClick}>
+					<div class="slds-box">
+						<img src={carRecord.Picture_URL__c} alt={carRecord.Name}>
+					</div>
+					<div class="car-info">
+						<p class="car-data">Name : <lightning-formatted-text value={carRecord.Name}></lightning-formatted-text></p>
+						<p class="car-data">ESRP : <lightning-formatted-number value={carRecord.Exshowroom_Price__c} format-style="currency"
+								currency-code="INR">
+							</lightning-formatted-number>
+						</p>
+					</div>
+		</div>
+	</template>
+	<template if:false={carRecord}>		
+		Unable to show the Car
+	</template>
+</template>

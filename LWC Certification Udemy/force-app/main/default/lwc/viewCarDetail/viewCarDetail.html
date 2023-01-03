@@ -1,0 +1,19 @@
+<template>
+	<template if:true={carRecordId}>
+		<lightning-record-view-form record-id={carRecordId} object-api-name={carObjectApiName}>
+			<div class="slds-box">
+				<lightning-output-field field-name={carNameField}> </lightning-output-field>
+				<lightning-output-field field-name={fuelType}> </lightning-output-field>
+				<lightning-output-field field-name={category}> </lightning-output-field>
+				<lightning-output-field field-name={exshowRoomPrice}> </lightning-output-field>
+			</div>
+		</lightning-record-view-form>
+	</template>
+	<template if:false={carRecordId}>
+		<div>
+			<p>
+				Please choose any car to see more details
+			</p>
+		</div>
+	</template>
+</template>

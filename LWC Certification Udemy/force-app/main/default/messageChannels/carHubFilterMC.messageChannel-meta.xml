@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+	<masterLabel>CarHubFilterMC</masterLabel>
+	<isExposed>true</isExposed>
+	<description>This channel is acting as data pipe which has applied filters for the components of CarHub porject</description>
+
+	<lightningMessageFields>
+		<fieldName>filterObj</fieldName>
+		<description>Applied filter</description>
+	</lightningMessageFields>
+
+</LightningMessageChannel>
